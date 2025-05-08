@@ -1,6 +1,11 @@
 @extends('admin.layout')
 @section('style')
 <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.css" />
+<style>
+    svg {
+        width: 100%;
+    }
+</style>
 @endsection
 @section('content')
 <div class="content-wrapper">
@@ -138,7 +143,7 @@
         var id = $(this).data('id');
         $.ajax({
             type: "post",
-            url: "{{ route('listOrderDetail') }}",
+            url: "{{ route('listOrderDetailRider') }}",
             data: {
                 id: id
             },
